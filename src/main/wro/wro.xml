@@ -1,6 +1,10 @@
 <groups xmlns="http://www.isdc.ro/wro">
 	<group name="angular.modules">
+	
+		<css>webjar:bootstrap/3.3.7-1/css/bootstrap.min.css</css>
 
+		<js>webjar:jquery/3.1.1/jquery.min.js</js>
+		<js>webjar:bootstrap/3.3.7-1/js/bootstrap.min.js</js>
 		<js>webjar:angularjs/1.6.2/angular.js</js>
 
 	</group>
