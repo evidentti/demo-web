@@ -1,4 +1,4 @@
-angular.module("demoWebApp", [])
+angular.module("demoWebApp", ['app.controllers'])
 
 .config(function() {
 
