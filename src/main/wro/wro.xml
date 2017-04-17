@@ -1,0 +1,8 @@
+<groups xmlns="http://www.isdc.ro/wro">
+	<group name="angular.modules">
+
+		<js>webjar:angularjs/1.6.2/angular.js</js>
+
+	</group>
+	
+</groups>
