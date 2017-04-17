@@ -1,4 +1,4 @@
-angular.module("demoWebApp", ['app.controllers'])
+angular.module("demoWebApp", ['ui.router', 'app.controllers', 'ngMessages'])
 
 .config(function() {
 
