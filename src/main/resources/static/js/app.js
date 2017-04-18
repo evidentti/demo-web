@@ -7,7 +7,7 @@ angular.module("demoWebApp", ['ui.router', 'app.service', 'app.controllers', 'ap
 })
 
 .run(function($rootScope, $state, $mdToast) {
-	console.log('demoWebApp', 'run');
+	console.log('demoWebApp', 'RUN');
 	
 	$rootScope.created = 'CREATED';
 	$rootScope.destroyed = 'DESTROYED';
