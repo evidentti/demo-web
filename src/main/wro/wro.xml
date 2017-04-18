@@ -1,5 +1,5 @@
 <groups xmlns="http://www.isdc.ro/wro">
-	<group name="angular.modules">
+	<group name="demo-web.vendor">
 	
 		<css>webjar:bootstrap/3.3.7-1/css/bootstrap.min.css</css>
 		
@@ -25,5 +25,9 @@
 		<js>webjar:angular-ui-router/0.4.2/release/angular-ui-router.min.js</js>
 
 	</group>
+	
+<!-- 	<group name="demo-web"> -->
+
+<!-- 	</group> -->
 	
 </groups>
