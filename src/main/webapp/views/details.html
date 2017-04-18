@@ -1,0 +1,61 @@
+<md-content class="md-padding virtualRepeatdemoVerticalUsage" data-ng-class="{'d-view-open': menuOpen, 'd-view': !menuOpen}" layout="column">
+
+	<section class="md-padding" layout="row" layout-align="none center">
+		<md-button ng-if="!menuOpen" class="md-fab md-primary d-fab" aria-label="Home" ng-click="goState()">
+            <ng-md-icon icon="home"></ng-md-icon>
+        </md-button>
+        <md-button class="md-fab md-primary d-fab " aria-label="Menu" ng-click="toggleMenu()">
+            <ng-md-icon icon="menu"></ng-md-icon>
+        </md-button>
+        <h3 class="d-margin-auto-ver" layout="row" layout-wrap><span class="d-padding-5-hor">{{appName}}</span><span class="d-padding-5-hor">- Virtual repeater</span></h3>
+	</section>
+	
+	<md-divider></md-divider>
+
+	<section layout="row" layout-wrap>
+		<md-button class="md-primary" ng-click="goState('main')">Repeater</md-button>
+		<md-button class="md-primary" ng-click="goState('details')">Virtual repeater</md-button>
+		<md-button class="md-primary" ng-click="ctrl.getIssues()" >Hae data</md-button>
+		
+		<div flex></div>
+		
+		<md-button class="md-icon-button md-primary" aria-label="Login">
+        	<ng-md-icon icon="login"></ng-md-icon>
+      	</md-button>
+      	<md-button class="md-icon-button md-primary" aria-label="Apple">
+        	<ng-md-icon icon="apple"></ng-md-icon>
+      	</md-button>
+      	<md-button class="md-icon-button md-primary" aria-label="Info">
+        	<ng-md-icon icon="info"></ng-md-icon>
+      	</md-button>
+	</section>
+	
+	<md-divider ng-if="!ctrl.loadingIssues" ></md-divider>
+	
+	<div style="height: 1px;">
+		<md-progress-linear ng-if="ctrl.loadingIssues" md-mode="indeterminate"></md-progress-linear>
+	</div>
+	
+	<section layout="column" flex >
+		<md-list flex data-ng-class="{'d-disabled': ctrl.loadingIssues}">
+    		<md-virtual-repeat-container flex layout-fill id="vertical-container">
+      			<md-list-item layout="row" md-virtual-repeat="issue in ctrl.issues" class="repeated-item" ng-click="ctrl.openIssue(issue)">
+					<div flex class="md-list-item-text">
+            			<h3>{{issue.top_category_name}}</h3>
+            			<h4>{{issue.category_name}}</h4>
+            			<div layout="row">
+            				<p md-truncate flex class="d-padding-15-right">{{issue.subject}}</p>
+            				<i>Viimeksi muokattu {{issue.last_modified_time | date : format : timezone}}</i>
+            			</div>
+					</div>
+      			</md-list-item>
+      			<md-subheader layout="row" class="md-no-sticky" layout-align="center center">
+					<md-button ng-if="ctrl.more" class="md-fab d-fab" aria-label="More" ng-click="ctrl.getIssues(true)">
+            			<ng-md-icon icon="expand_more"></ng-md-icon>
+       				</md-button>
+				</md-subheader>
+    		</md-virtual-repeat-container>
+  		</md-list>
+	</section>
+	
+</md-content>
