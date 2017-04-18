@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('details.controller', [])
 
 .controller('detailsController', function($rootScope, $scope, $state, AppService, $mdToast) {

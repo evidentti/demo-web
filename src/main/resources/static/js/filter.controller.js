@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('filter.controller', [])
 
 .controller('filterController', function($rootScope, $scope, $state, AppService) {

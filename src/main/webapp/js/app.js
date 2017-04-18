@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module("demoWebApp", ['ui.router', 'app.service', 'app.controllers', 'app.routes', 'ngMaterial', 'ngMdIcons', 'ngMessages'])
 
 .config(function() {

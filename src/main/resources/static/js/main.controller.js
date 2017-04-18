@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('main.controller', [])
 
 .controller('mainController', function($rootScope, $scope, $state, AppService) {

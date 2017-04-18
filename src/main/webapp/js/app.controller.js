@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('app.controllers', ['main.controller', 'details.controller', 'filter.controller'])
 
 .controller('appController', function($rootScope, $scope) {

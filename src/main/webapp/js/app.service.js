@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('app.service', ['ngResource'])
 .factory('IssueResource', ['$resource', function ($resource) {
 	return $resource('https://dev.hel.fi:443/paatokset/v1/issue/', {}, {
