@@ -26,6 +26,10 @@
 
 	</group>
 	
+	<group name="demo.competition">
+		<js>classpath:competition/set.variable.rule.operation.js</js>
+	</group>
+	
 	<group name="demo.web">
 	
 		<css>classpath:css/app.css</css>
