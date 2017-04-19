@@ -22,7 +22,7 @@ angular.module('data.directive', [])
         	
         	$scope.$watch('issue', function (newValue, oldValue, scope) {
         		if(!angular.equals(newValue, oldValue)) {
-        			console.debug('dtDir', $scope.id, ': issue changed =>', newValue.id);
+        			console.debug('dtDir', $scope.id, ': issue =>', newValue.id);
         		}
         	}, true);
         	
