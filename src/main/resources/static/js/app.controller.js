@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.controllers', ['main.controller', 'details.controller', 'filter.controller'])
+angular.module('app.controllers', ['main.controller', 'details.controller', 'filter.controller', 'competition.controller'])
 
 .controller('appController', function($rootScope, $scope) {
 	console.log('appController', $rootScope.created);

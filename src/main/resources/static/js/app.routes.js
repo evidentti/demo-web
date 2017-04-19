@@ -34,6 +34,21 @@ angular.module('app.routes', [])
                 controllerAs: 'ctrl'
             }
         }
+    })
+    .state("competition", {
+        url: '/competition',
+        views: {
+            'appView': {
+                templateUrl: 'views/competition.html',
+                controller: 'competitionController',
+                controllerAs: 'ctrl'
+            },
+            'menuView': {
+                templateUrl: 'views/filter.html',
+                controller: 'filterController',
+                controllerAs: 'ctrl'
+            }
+        }
     });
 	
 	$urlRouterProvider.otherwise('/main');

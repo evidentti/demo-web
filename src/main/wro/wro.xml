@@ -36,6 +36,7 @@
 		<js>classpath:js/main.controller.js</js>
 		<js>classpath:js/details.controller.js</js>
 		<js>classpath:js/filter.controller.js</js>
+		<js>classpath:js/competition.controller.js</js>
 		<js>classpath:js/app.controller.js</js>
 		<js>classpath:js/app.routes.js</js>
 		<js>classpath:js/app.js</js>
