@@ -16,7 +16,7 @@
 		<md-button class="md-primary" ng-click="goState('main')">Repeater</md-button>
 		<md-button class="md-primary" ng-click="goState('details')">Virtual repeater</md-button>
 		<md-button class="md-primary" ng-click="goState('competition')">Competition</md-button>
-		<md-button class="md-primary" ng-click="ctrl.getIssues()" >Hae data</md-button>
+		<md-button class="md-primary" ng-click="ctrl.getCompetition()" >Hae data</md-button>
 		
 		<div flex></div>
 		
@@ -40,14 +40,9 @@
 	<section layout="column" flex >
 		<md-list flex data-ng-class="{'d-disabled': ctrl.loadingIssues}">
     		<md-virtual-repeat-container flex layout-fill id="vertical-container">
-      			<md-list-item aria-label="issue" layout="row" md-virtual-repeat="issue in ctrl.issues" class="repeated-item" ng-click="ctrl.openIssue(issue)">
-					<dt-dir flex issue=issue></dt-dir>
+      			<md-list-item aria-label="operation" layout="row" md-virtual-repeat="operation in ctrl.competition.rule.operations" class="repeated-item" ng-click="ctrl.openIssue(issue)">
+					<cp-dir flex style="overflow: hidden;" operation=operation></cp-dir>
       			</md-list-item>
-      			<md-subheader layout="row" class="md-no-sticky" layout-align="center center">
-					<md-button ng-if="ctrl.more" class="md-fab d-fab" aria-label="More" ng-click="ctrl.getIssues(true)">
-            			<ng-md-icon icon="expand_more"></ng-md-icon>
-       				</md-button>
-				</md-subheader>
     		</md-virtual-repeat-container>
   		</md-list>
 	</section>

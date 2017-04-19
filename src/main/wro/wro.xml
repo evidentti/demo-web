@@ -31,6 +31,7 @@
 		<css>classpath:css/app.css</css>
 		
 		<js>classpath:js/data.directive.js</js>
+		<js>classpath:js/competition.directive.js</js>
 	
 		<js>classpath:js/app.service.js</js>
 		<js>classpath:js/main.controller.js</js>
