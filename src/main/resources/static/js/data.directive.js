@@ -16,10 +16,18 @@ angular.module('data.directive', [])
         		+	'</div>'
         		+	'</div>',
         replace: 	'true',
-        controller: function($scope) {
+        controller: function($scope, $rootScope) {
+        	$scope.id = $rootScope.getId();
+        	console.log('dtDir', $scope.id, $rootScope.created);
+        	
+        	$scope.$watch('issue', function (newValue, oldValue, scope) {
+        		if(!angular.equals(newValue, oldValue)) {
+        			console.debug('dtDir', $scope.id, ': issue changed =>', newValue.id);
+        		}
+        	}, true);
         	
         	$scope.$on('$destroy', function () {
-
+        		console.log('dtDir', $scope.id, $rootScope.destroyed);
             });
         }
     };

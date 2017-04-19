@@ -13,6 +13,7 @@ angular.module("demoWebApp", ['ui.router', 'app.service', 'app.controllers', 'ap
 	$rootScope.destroyed = 'DESTROYED';
 	$rootScope.appName = 'DEMO APP';
 	$rootScope.menuOpen = true;
+	var id;
 	
 	$rootScope.goState = function(st) {
 		console.log('goState', st);
@@ -23,6 +24,13 @@ angular.module("demoWebApp", ['ui.router', 'app.service', 'app.controllers', 'ap
 			$state.go('main');
 		}
 	};
+	
+	$rootScope.getId = function() {
+		if(!id) {
+			id = 10000;
+		}
+		return id++;
+	}
 	
 	$rootScope.showToast = function(text, position) {
 		if(!angular.isString(position)) {
