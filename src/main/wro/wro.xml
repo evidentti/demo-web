@@ -1,5 +1,5 @@
 <groups xmlns="http://www.isdc.ro/wro">
-	<group name="demo-web.vendor">
+	<group name="vendor">
 	
 		<css>webjar:bootstrap/3.3.7-1/css/bootstrap.min.css</css>
 		
@@ -26,16 +26,18 @@
 
 	</group>
 	
-<!-- 	<group name="demo-web"> -->
+	<group name="demo-web">
 	
-<!-- 		<css>classpath:css/app.css</css> -->
+		<css>classpath:css/app.css</css>
 	
-<!-- 		<js>classpath:js/main.controller.js</js> -->
-<!-- 		<js>classpath:js/details.controller.js</js> -->
-<!-- 		<js>classpath:js/filter.controller.js</js> -->
-<!-- 		<js>classpath:js/app.controller.js</js> -->
-<!-- 		<js>classpath:js/app.routes.js</js> -->
-
-<!-- 	</group> -->
+		<js>classpath:js/app.service.js</js>
+		<js>classpath:js/main.controller.js</js>
+		<js>classpath:js/details.controller.js</js>
+		<js>classpath:js/filter.controller.js</js>
+		<js>classpath:js/app.controller.js</js>
+		<js>classpath:js/app.routes.js</js>
+		<js>classpath:js/app.js</js>
+		
+	</group>
 	
 </groups>
