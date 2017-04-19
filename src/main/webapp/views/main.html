@@ -40,15 +40,8 @@
 		<section class="md-padding">
 		
 			<md-list data-ng-class="{'d-disabled': ctrl.loadingIssues}">
-				<md-list-item ng-repeat="issue in ctrl.issues" ng-click="ctrl.openIssue(issue)">
-					<div flex class="md-list-item-text">
-            			<h3>{{issue.top_category_name}}</h3>
-            			<h4>{{issue.category_name}}</h4>
-            			<div layout="row">
-            				<p md-truncate flex class="d-padding-15-right">{{issue.subject}}</p>
-            				<i>Viimeksi muokattu {{issue.last_modified_time | date : format : timezone}}</i>
-            			</div>
-					</div>
+				<md-list-item aria-label="issue" ng-repeat="issue in ctrl.issues" ng-click="ctrl.openIssue(issue)">
+					<dt-dir flex issue=issue></dt-dir>
 					<md-divider></md-divider>
 				</md-list-item>
 				<md-subheader layout="row" class="md-no-sticky" layout-align="center center">

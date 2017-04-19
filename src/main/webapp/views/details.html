@@ -39,15 +39,8 @@
 	<section layout="column" flex >
 		<md-list flex data-ng-class="{'d-disabled': ctrl.loadingIssues}">
     		<md-virtual-repeat-container flex layout-fill id="vertical-container">
-      			<md-list-item layout="row" md-virtual-repeat="issue in ctrl.issues" class="repeated-item" ng-click="ctrl.openIssue(issue)">
-					<div flex class="md-list-item-text">
-            			<h3>{{issue.top_category_name}}</h3>
-            			<h4>{{issue.category_name}}</h4>
-            			<div layout="row">
-            				<p md-truncate flex class="d-padding-15-right">{{issue.subject}}</p>
-            				<i>Viimeksi muokattu {{issue.last_modified_time | date : format : timezone}}</i>
-            			</div>
-					</div>
+      			<md-list-item aria-label="issue" layout="row" md-virtual-repeat="issue in ctrl.issues" class="repeated-item" ng-click="ctrl.openIssue(issue)">
+					<dt-dir flex issue=issue></dt-dir>
       			</md-list-item>
       			<md-subheader layout="row" class="md-no-sticky" layout-align="center center">
 					<md-button ng-if="ctrl.more" class="md-fab d-fab" aria-label="More" ng-click="ctrl.getIssues(true)">
