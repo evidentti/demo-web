@@ -7,16 +7,14 @@ angular.module('competition.directive', [])
         	operation: '=operation'
         },
         restrict: 	'E',
-        template: 	'<div>'
-        		+	'<p>{{operation.variableName}}</p>'
-        		+	'<p>{{operation.type}}</p>'
-        		+	'<svro-dir ng-if="operation.type === setVariableOperationString"></svro-dir>'
+        template: 	'<div layout="row" layout-align="none center">'
+        		+	'<span class="d-padding">{{operation.variableName}}</span><span class="d-padding">=</span><svro-dir variable-value=operation.variableValue ng-if="operation.type === setVariableOperationString"></svro-dir>'
         		+	'</div>',
         replace: 	'true',
         controller: function($scope, $rootScope) {
         	$scope.id = $rootScope.getId();
         	$scope.setVariableOperationString = 'fi.otavamedia.kilpailuautomaatti.domain.entity.rule.SetVariableOperation';
-        	console.log('cpDir', $scope.id, $rootScope.created, ': operation = ', $scope.operation);
+//        	console.log('cpDir', $scope.id, $rootScope.created, ': operation = ', $scope.operation);
         	
         	$scope.$watch('operation', function (newValue, oldValue, scope) {
         		if(!angular.equals(newValue, oldValue)) {

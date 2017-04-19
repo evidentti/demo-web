@@ -27,6 +27,7 @@
 	</group>
 	
 	<group name="demo.competition">
+		<js>classpath:competition/operand.js</js>
 		<js>classpath:competition/set.variable.rule.operation.js</js>
 	</group>
 	

@@ -1,0 +1,16 @@
+<div class="" layout="row" layout-align="none center">
+	<div 	ng-if="operand.valueOperation.type === 'fi.otavamedia.kilpailuautomaatti.domain.entity.rule.valueoperation.ValueFromResultOperation'" 
+			class="" layout="row" layout-align="none center">
+		<div class="d-padding-hor d-margin d-border">{{operand.valueOperation.resultType}}</div>   
+		<div class="d-padding-hor d-margin d-border">{{operand.valueOperation.query.name}}</div>
+		<div ng-if="operand.valueOperation.period" class="d-padding-hor d-margin d-border">{{operand.valueOperation.period}}</div>
+		<div ng-if="!operand.valueOperation.period" class="d-padding-hor d-margin d-border">Kaikki</div>
+	</div>
+	
+	<div 	ng-if="operand.valueOperation.type === 'fi.otavamedia.kilpailuautomaatti.domain.entity.rule.ManualValueOperation'" 
+			class="" layout="row" layout-align="none center">
+		<div class="d-padding-hor d-margin d-border">{{operand.valueOperation.value}}</div>   
+	</div>
+	<h3 ng-if="operand.operand" class="md-title md-padding d-margin-0">{{operand.operand}}</h3>
+	
+</div>

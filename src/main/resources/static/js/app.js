@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module("demoWebApp", ['ui.router', 'app.service', 'app.controllers', 'app.routes', 'data.directive',
-	'competition.directive', 'set.variable.rule.operation.directive', 'ngMaterial', 'ngMdIcons', 'ngMessages'])
+	'competition.directive', 'set.variable.rule.operation.directive', 'operand.directive', 'ngMaterial', 'ngMdIcons', 'ngMessages'])
 
 .config(function() {
 
