@@ -18,7 +18,7 @@ angular.module('data.directive', [])
         replace: 	'true',
         controller: function($scope, $rootScope) {
         	$scope.id = $rootScope.getId();
-        	console.log('dtDir', $scope.id, $rootScope.created);
+        	console.log('dtDir', $scope.id, $rootScope.created, ': issue =', $scope.issue.id);
         	
         	$scope.$watch('issue', function (newValue, oldValue, scope) {
         		if(!angular.equals(newValue, oldValue)) {

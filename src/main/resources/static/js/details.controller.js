@@ -31,7 +31,7 @@ angular.module('details.controller', [])
         	console.debug('detailsController.getIssues: notify', notification);
         	self.loadingIssues = true;
         }).finally(function () {
-        	console.debug('detailsController.getIssues: finally', self.issuesMeta);
+        	console.debug('detailsController.getIssues: finally');
         	self.loadingIssues = false;
         	var text;
         	if(angular.isArray(self.issues)) {
