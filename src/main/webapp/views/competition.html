@@ -40,7 +40,7 @@
 	<section layout="column" flex >
 		<md-list flex data-ng-class="{'d-disabled': ctrl.loadingIssues}">
     		<md-virtual-repeat-container flex layout-fill id="vertical-container">
-      			<md-list-item aria-label="operation" layout="row" md-virtual-repeat="operation in ctrl.competition.rule.operations" class="repeated-item"  ng-click="ctrl.openIssue(issue)">
+      			<md-list-item aria-label="operation" layout="row" md-virtual-repeat="operation in ctrl.competition.rule.operations" class="repeated-item" ng-click="ctrl.openIssue(issue)">
 					<cp-dir flex style="overflow: hidden;" operation=operation></cp-dir>
       			</md-list-item>
     		</md-virtual-repeat-container>
