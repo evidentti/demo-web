@@ -6,7 +6,6 @@
 	<groupId>com.example</groupId>
 	<artifactId>demo-web</artifactId>
 	<version>0.0.1</version>
-	<packaging>war</packaging>
 
 	<name>demo-web</name>
 	<description>Demo project for Spring Boot</description>
