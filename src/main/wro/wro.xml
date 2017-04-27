@@ -1,5 +1,5 @@
 <groups xmlns="http://www.isdc.ro/wro">
-	<group name="demo.vendor">
+	<group name="app.vendor">
 	
 		<css>webjar:bootstrap/3.3.7-1/css/bootstrap.min.css</css>
 		
