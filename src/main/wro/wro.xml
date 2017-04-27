@@ -26,20 +26,4 @@
 
 	</group>
 	
-<!-- 	<group name="demo.web"> -->
-	
-<!-- 		<css>classpath:css/app.css</css> -->
-		
-<!-- 		<js>classpath:js/data.directive.js</js> -->
-	
-<!-- 		<js>classpath:js/app.service.js</js> -->
-<!-- 		<js>classpath:js/main.controller.js</js> -->
-<!-- 		<js>classpath:js/details.controller.js</js> -->
-<!-- 		<js>classpath:js/filter.controller.js</js> -->
-<!-- 		<js>classpath:js/app.controller.js</js> -->
-<!-- 		<js>classpath:js/app.routes.js</js> -->
-<!-- 		<js>classpath:js/app.js</js> -->
-		
-<!-- 	</group> -->
-	
 </groups>

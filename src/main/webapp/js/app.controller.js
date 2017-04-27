@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('app.controllers', ['main.controller', 'details.controller', 'filter.controller'])
+angular.module('app.controllers', ['main.controller'])
 
-.controller('appController', function($rootScope, $scope) {
-	console.log('appController', $rootScope.created);
+.controller('appController', function($scope) {
+	console.log('appController', 'construct');
 	
 	$scope.$on('$destroy', function() {
-		console.log('appController', $rootScope.destroyed);
+		console.log('appController', 'destroy');
 	});
 });
